@@ -1,12 +1,12 @@
 # README
 
-### 项目地址[RockChinQ/QChatGPT](https://github.com/RockChinQ/QChatGPT)
+### 项目地址[a121673163/QChatGPT](https://github.com/a121673163/QChatGPT)
 
 本项目旨在为原项目提供一个简单的 Docker 部署方式，方便大家使用。
 
 下述命令均在项目根目录下执行。
 
-原项目地址：[RockChinQ/QChatGPT](https://github.com/RockChinQ/QChatGPT)
+
 
 ## 1. 安装 Docker和 Docker Compose
 
@@ -19,7 +19,7 @@
 ### i. 克隆仓库
 
 ```bash
-git clone https://github.com/mikumifa/QChatGPT-Docker-Installer
+git clone https://github.com/a121673163/QChatGPT-Docker-Installer
 cd QChatGPT-Docker-Installer
 ```
 
@@ -61,7 +61,7 @@ chmod +x loadFile.sh && ./loadFile.sh
 ### i. 初始化mirai
 
 ```
-docker compose run --rm mirai
+docker-compose run --rm mirai
 ```
 > 上面这一步，windows操作系统的可能会报错`error during connect: This error may indicate that the docker daemon is not running` 
 > 解决方式是CMD管理员模式`DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V`
@@ -111,13 +111,13 @@ adapterSettings:
 
 ### i. 启动mirai容器
 ```
-docker compose run -itd mirai
+docker-compose run -d mirai
 ```
 此命令将在后台启动mirai容器
 
 ### ii. 启动主程序容器
 ```
-docker compose run -itd setup
+docker-compose run -d setup
 ```
 此命令将在后台启动主程序的容器并完成配置
 
